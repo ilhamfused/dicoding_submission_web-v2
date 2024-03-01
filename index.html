@@ -3,9 +3,227 @@
   <head>
     <meta charset="UTF-8" />
     <meta
+      http-equiv="X-UA-Compatible"
+      content="IE=edge" />
+    <meta
       name="viewport"
       content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link
+      rel="icon"
+      href="img/favicon.png" />
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com" />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap"
+      rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="styles/general.css" />
+    <link
+      rel="stylesheet"
+      href="styles/style.css" />
+    <link
+      rel="stylesheet"
+      href="styles/queries.css" />
+    <title>Middle</title>
   </head>
-  <body></body>
+  <body>
+    <header class="header">
+      <div class="logo">
+        <a href="#">
+          <img
+            src="img/logo-full.png"
+            alt="logo" />
+        </a>
+      </div>
+
+      <nav class="nav">
+        <div class="search">
+          <ion-icon
+            class="nav-icon"
+            name="search-outline"></ion-icon>
+          <input
+            type="text"
+            placeholder="Search" />
+        </div>
+        <ul class="nav-list">
+          <li class="nav-item">
+            <ion-icon
+              class="nav-icon"
+              name="create-outline"></ion-icon>
+            <span class="nav-item-text">Write</span>
+          </li>
+          <li class="nav-item">
+            <ion-icon
+              class="nav-icon"
+              name="notifications-outline"></ion-icon>
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              href="#"
+              >Login</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="main">
+      <section class="article-info padding-container max-container">
+        <div class="article-publish-info">
+          <p>
+            Published in
+            <img
+              class="article-publish-info-logo"
+              src="img/logo.png"
+              alt="" />
+            <span class="article-publish-info-logo-text">Middle </span>
+          </p>
+          <p class="article-info-dot">&bull;</p>
+          <p class="publish-date">20 Februari 2024</p>
+        </div>
+        <div class="article-writer-info">
+          <ul>
+            <li>
+              <a href="#">
+                <ion-icon
+                  class="article-info-icon"
+                  name="logo-linkedin"></ion-icon>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <ion-icon
+                  class="article-info-icon"
+                  name="logo-facebook"></ion-icon>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <ion-icon
+                  class="article-info-icon"
+                  name="logo-instagram"></ion-icon>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <ion-icon
+                  class="article-info-icon"
+                  name="link-outline"></ion-icon>
+              </a>
+            </li>
+            <li class="dropdown">
+              <a href="#">
+                <ion-icon
+                  class="article-info-icon"
+                  name="ellipsis-horizontal-outline"></ion-icon>
+              </a>
+              <ul class="dropdown-menu hidden">
+                <li>
+                  <a href="#"><ion-icon name="person-add-outline"></ion-icon> <span>Follow writer</span></a>
+                </li>
+                <li>
+                  <a href="#"><ion-icon name="folder-open-outline"></ion-icon><span>Follow publication</span></a>
+                </li>
+                <li>
+                  <a href="#"><ion-icon name="bookmark-outline"></ion-icon><span>Save article</span></a>
+                </li>
+                <li>
+                  <a href="#"><ion-icon name="flag-outline"></ion-icon><span>Report</span></a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <article class="max-container padding-container">
+        <div class="article-title">
+          <h1 class="heading-1 font-opensans"></h1>
+        </div>
+        <div class="author-info">
+          <div class="author">
+            <img
+              class="author-picture"
+              src="img/foto-author.jpg"
+              alt="author-foto" />
+            <div class="author-detail">
+              <p class="font-opensans bold-1">Ilham RH</p>
+              <p class="font-opensans light-1">Filsuf IT Jawa</p>
+            </div>
+          </div>
+          <div class="article-detail">
+            <p class="light-1">2 minutes read</p>
+            <p class="light-1">&bull;</p>
+            <p class="bold-1">Try Audio</p>
+            <ion-icon
+              class="bold-1"
+              name="play-circle"></ion-icon>
+          </div>
+        </div>
+        <div class="article-photo">
+          <img
+            src="img/article-img/foto-cover2.jpg"
+            alt="foto cover" />
+        </div>
+        <div class="article-content">
+          <figure class="quote">
+            <blockquote class="font-opensans bold-italic">"Bangsa yang besar adalah bangsa yang mengenal sejarah. Jangan sekali-kali melupakan sejarah."</blockquote>
+            <figcaption class="font-opensans regular-1">&mdash; Ir. Soekarno</figcaption>
+          </figure>
+        </div>
+      </article>
+      <div class="divider padding-container">
+        <hr />
+      </div>
+      <aside class="suggestion max-container padding-container">
+        <div class="suggestion-header">
+          <h2 class="font-opensans heading-2">Best Article Chosen for You</h2>
+          <p class="font-opensans light-2">We have curated the best article based on your interest topic</p>
+        </div>
+        <div class="cards font-opensans">
+          <!-- <div class="card">
+            <img
+              src="https://source.unsplash.com/random/500x300?3d"
+              class="card-image"
+              alt="taxi" />
+            <h3 class="card-title"><a href="#">How to Create Awesome 3D Modern Nature with Blender</a></h3>
+            <div class="card-info">
+              <img
+                src="https://i.pravatar.cc/48?u=3"
+                alt="foto-profil" />
+              <p>by <strong>Budi Supriadi </strong><span class="light-1">&bull;</span> 7 mins read</p>
+            </div>
+            <div class="tags">
+              <div class="tag"><a href="#">3D Art</a></div>
+              <div class="tag"><a href="#">Blender</a></div>
+              <div class="tag"><a href="#">Visual Arts</a></div>
+              <div class="tag"><a href="#">Illustrator</a></div>
+            </div>
+          </div> -->
+        </div>
+      </aside>
+    </main>
+    <footer class="footer max-container padding-container">
+      <ul class="footer-items">
+        <li><a href="#">Help</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Career</a></li>
+        <li><a href="#">Blog</a></li>
+      </ul>
+    </footer>
+    <script src="js/script.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  </body>
 </html>

@@ -1,0 +1,98 @@
+const article = {
+  title: "Mengapa Mempelajari Sejarah sebuah Negara Penting",
+  content: [`Sejarah sebuah negara adalah cermin dari perjalanan panjang yang telah dilaluinya. Melalui rentetan peristiwa yang terjadi, kita bisa memahami bagaimana sebuah negara menjadi apa yang kita kenal saat ini. Ada kebijakan yang sukses, ada kegagalan yang meruntuhkan, dan ada tokoh-tokoh yang memainkan peran penting dalam menentukan nasib bangsanya. Dalam konteks ini, seperti yang dikatakan oleh Nelson Mandela, "Untuk mengetahui masa depan, Anda harus memahami masa lalu." Mempelajari sejarah sebuah negara adalah langkah awal untuk memahami identitas, nilai, dan perjalanan suatu bangsa.`, `Sejarah adalah guru terbaik kita. Melalui cerita-cerita masa lalu, kita bisa belajar dari kesalahan dan pencapaian yang telah dilakukan oleh generasi sebelumnya. Seperti yang diungkapkan oleh Mahatma Gandhi, "Sejarah tidak boleh dijadikan pelajaran untuk membuat kita patah semangat, tetapi menjadi panduan yang cerdik dan penuh inspirasi." Dalam konteks ini, ketika kita mempelajari sejarah sebuah negara, kita dapat menemukan inspirasi dari tokoh-tokoh besar dan perjuangan mereka untuk keadilan, kebebasan, dan kemajuan.`, `Sejarah adalah kunci untuk memahami kompleksitas dinamika sosial dan politik suatu negara. Seperti yang dikatakan oleh Arnold J. Toynbee, "Sejarah adalah sebuah peta manusia." Dalam setiap peristiwa sejarah, terdapat lapisan-lapisan kompleks dari faktor-faktor ekonomi, politik, sosial, dan budaya yang saling terkait. Dengan memahami sejarah, kita dapat melihat pola-pola yang muncul dan mengerti akar penyebab dari berbagai masalah atau konflik yang mungkin sedang kita hadapi saat ini.`, `Mempelajari sejarah sebuah negara adalah bukan sekadar mengenal kembali peristiwa masa lalu, tetapi juga memahami identitas, nilai-nilai, dan tujuan sebuah bangsa. Dalam era yang terus berubah ini, kebijaksanaan dari tokoh-tokoh terdahulu dan pengalaman-pengalaman sejarah sangat berharga untuk membimbing langkah kita ke masa depan yang lebih baik. Sebagaimana diungkapkan oleh Marcus Garvey, "Sejarah yang besar akan mengajar kita bahwa kejayaan terberat yang pernah dicapai manusia adalah pengorbanan atas kepentingan bersama."`],
+};
+
+const suggestions = [
+  {
+    title: "How to Create Awesome 3D Modern Nature with Blender",
+    author: "Budi Supriadi",
+    timeRead: 7,
+    tags: ["3D Art", "Blender", "Visual Arts", "Illustrator"],
+    articleImg: "img/article-img/1.jpeg",
+    AuthorImg: "img/author-img/1.jpeg",
+  },
+  {
+    title: "Avoid This Thing When You Make 3D Design",
+    author: "Ernalto Lavoco",
+    timeRead: 5,
+    tags: ["3D Art", "Blender", "Visual Arts", "Illustrator"],
+    articleImg: "img/article-img/2.jpeg",
+    AuthorImg: "img/author-img/2.jpeg",
+  },
+  {
+    title: "Will Artificial Intelligence Replace The Digital Artist",
+    author: "Technerd Guy",
+    timeRead: 2,
+    tags: ["Illustrator", "Tech", "Artist", "Digital"],
+    articleImg: "img/article-img/3.jpeg",
+    AuthorImg: "img/author-img/3.jpeg",
+  },
+  {
+    title: "How to Become a Pro as a UI/UX Designer",
+    author: "Thomas Manggala",
+    timeRead: 10,
+    tags: ["Illustrator", "Tech", "Artist", "Digital"],
+    articleImg: "img/article-img/4.jpeg",
+    AuthorImg: "img/author-img/4.jpeg",
+  },
+  {
+    title: "Why Brainstroming With Team are Matters",
+    author: "Salabo Dalbo",
+    timeRead: 3,
+    tags: ["Team", "Work Culture", "Brainstorm", "Idea"],
+    articleImg: "img/article-img/5.jpeg",
+    AuthorImg: "img/author-img/5.jpeg",
+  },
+  {
+    title: "Efficient When Career Switching is a Must",
+    author: "Dalgone Qovie",
+    timeRead: 6,
+    tags: ["Career", "Self Development", "Motivation"],
+    articleImg: "img/article-img/6.jpeg",
+    AuthorImg: "img/author-img/6.jpeg",
+  },
+];
+
+document.addEventListener("DOMContentLoaded", function () {
+  const dropdown = document.querySelector(".dropdown");
+  const dropdownMenu = document.querySelector(".dropdown-menu");
+  const articleTitle = document.querySelector(".article-title>h1");
+  const articleContent = document.querySelector(".article-content");
+  const cardComponent = document.querySelector(".cards");
+
+  suggestions.map(
+    (sug) =>
+      (cardComponent.innerHTML += `<div class="card">
+  <img
+    src="${sug.articleImg}"
+    class="card-image"
+    alt="Article Image" />
+  <h3 class="card-title"><a href="#">${sug.title}</a></h3>
+  <div class="card-info">
+    <img
+      src="${sug.AuthorImg}"
+      alt="foto-profil" />
+    <p>by <strong>${sug.author} </strong><span class="light-1">&bull;</span> ${sug.timeRead} mins read</p>
+  </div>
+  <div class="tags">
+    ${sug.tags.map((tag) => `<div class="tag"><a href="#">${tag}</a></div>`).join("")}
+  </div>
+</div>`)
+  );
+  articleTitle.innerHTML = article.title;
+  article.content.map((konten) => (articleContent.innerHTML += `<p class="regular-1">${konten}</p>`));
+  // console.log(articleTitle);
+
+  dropdown.addEventListener("click", function () {
+    dropdownMenu.classList.toggle("hidden");
+  });
+
+  window.onclick = function (e) {
+    if (!e.target.matches(".article-info-icon") && !dropdownMenu.classList.contains("hidden")) {
+      dropdownMenu.classList.add("hidden");
+    }
+  };
+});
+
+// `Sejarah mengajarkan kita tentang keragaman dan pluralitas. Seperti yang diungkapkan oleh John F. Kennedy, "Negara yang tidak menghargai sejarahnya tidak dapat menghargai dirinya sendiri." Setiap negara memiliki sejarah yang kaya dan beragam, dengan berbagai macam pengalaman dan peristiwa yang membentuk identitasnya. Melalui mempelajari sejarah, kita bisa memahami nilai-nilai yang menjadi landasan keberagaman dan kesatuan dalam suatu negara.`, `Sejarah adalah cermin moralitas dan etika. Seperti yang diungkapkan oleh Martin Luther King Jr., "Sejarah akan mencatat tindakan kita dan juga sejarah akan memperhitungkan apakah kita bertindak dengan benar atau salah." Dalam setiap bab sejarah, ada pelajaran moral yang berharga yang dapat kita ambil. Kita bisa belajar dari kesalahan masa lalu untuk mencegahnya terulang di masa depan, dan kita juga bisa memperkuat nilai-nilai positif yang telah menginspirasi perubahan positif.`,, `Sejarah memperkaya dan memperluas wawasan kita tentang dunia. Seperti yang diungkapkan oleh George Santayana, "Mereka yang tidak dapat mengingat masa lalu dihukum untuk mengulanginya." Melalui memahami sejarah sebuah negara, kita dapat memahami hubungan dan interaksi kompleks antara negara-negara di seluruh dunia. Hal ini membantu kita untuk menjadi warga dunia yang lebih sadar dan bertanggung jawab terhadap tantangan global yang dihadapi oleh umat manusia saat ini.`

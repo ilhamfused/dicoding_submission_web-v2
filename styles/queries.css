@@ -1,0 +1,186 @@
+/* ************** */
+/* ABOVE 640px */
+/* ************** */
+
+@media (min-width: 40em) {
+  html {
+    font-size: 68.75%;
+    overflow-x: hidden;
+  }
+
+  .header {
+    gap: 1.6rem;
+    margin-bottom: 4rem;
+  }
+
+  .nav {
+    flex-grow: 1;
+    justify-content: space-between;
+  }
+
+  .search {
+    width: 15rem;
+    height: 3.6rem;
+    padding: 0.2rem 1rem;
+    display: flex;
+    align-items: center;
+    background-color: #f3f4f6;
+    border-radius: 50rem;
+    gap: 1rem;
+  }
+
+  .search input {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: #f3f4f6;
+    border: 0;
+    font-size: 1.6rem;
+    font-family: "Rubik", sans-serif;
+  }
+
+  .search input:focus {
+    outline: none;
+  }
+
+  .nav-list {
+    gap: 2rem;
+  }
+
+  .nav-item-text {
+    display: block;
+    font-size: 1.6rem;
+  }
+
+  .article-info {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .article-info-dot {
+    display: block;
+  }
+
+  .article-publish-info {
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  .article-photo {
+    height: 25rem;
+    margin-bottom: 2.5rem;
+  }
+}
+
+/* ************** */
+/* ABOVE 768px */
+/* ************** */
+
+@media (min-width: 48em) {
+  html {
+    font-size: 75%;
+    overflow-x: hidden;
+  }
+
+  .header {
+    margin-bottom: 5rem;
+  }
+
+  .search {
+    width: 18rem;
+  }
+
+  .article-info {
+    margin-bottom: 4rem;
+  }
+
+  .article-publish-info {
+    flex-direction: row;
+    gap: 0.5rem;
+  }
+
+  .article-info-icon {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .article-writer-info ul {
+    gap: 1.4rem;
+  }
+
+  .dropdown-menu {
+    top: 3rem;
+    font-size: 1.2rem;
+    width: 12rem;
+    padding: 1rem 1.4rem;
+  }
+
+  .article-title {
+    margin-bottom: 5rem;
+  }
+
+  .article-photo {
+    height: 28rem;
+    margin-bottom: 3rem;
+  }
+
+  .tag {
+    font-size: 1rem;
+  }
+
+  .card-image {
+    height: 15rem;
+  }
+
+  .footer {
+    padding: 2rem 0;
+  }
+}
+
+/* ************** */
+/* ABOVE 1024px */
+/* ************** */
+@media (min-width: 64em) {
+  html {
+    font-size: 81.2%;
+    overflow-x: hidden;
+  }
+
+  .header {
+    margin-bottom: 6rem;
+  }
+
+  .search {
+    width: 22rem;
+  }
+
+  .article-publish-info {
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  .dropdown-menu {
+    width: 15rem;
+  }
+
+  .author-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .article-photo {
+    height: 38rem;
+    margin-bottom: 3.5rem;
+  }
+
+  .suggestion-header {
+    gap: 3.5rem;
+  }
+
+  .card-image {
+    height: 17rem;
+  }
+}
